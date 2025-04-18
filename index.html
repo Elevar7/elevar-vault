@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elevar Vault</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; font-family: 'Helvetica Neue', Arial, sans-serif; background: #000; color: #fff; }
+    a { text-decoration: none; }
+
+    :root {
+      --gold: #D4AF37;
+      --white: #fff;
+      --dark: #000;
+    }
+
+    .container { width: 90%; max-width: 800px; margin: auto; padding: 40px 0; }
+
+    /* Hero with video */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.3;
+    }
+
+    .overlay {
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .overlay h1 {
+      font-size: 2.5rem;
+      line-height: 1.3;
+      color: var(--gold);
+    }
+
+    .overlay p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: var(--white);
+      opacity: 0.85;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    /* Features */
+    .features {
+      margin-top: 60px;
+      display: grid;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
+    .feature p {
+      color: var(--white);
+      opacity: 0.8;
+      font-size: 1rem;
+    }
+
+    /* Form */
+    .form-section {
+      margin-top: 100px;
+      max-width: 600px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .form input, .form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      background: #111;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    .form button {
+      width: 100%;
+      padding: 14px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form button:hover {
+      background: #c49c29;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      margin-top: 80px;
+    }
+
+    .testimonials h3 {
+      text-align: center;
+      color: var(--gold);
+      margin-bottom: 30px;
+    }
+
+    .testimonials blockquote {
+      background: #111;
+      padding: 20px;
+      border-left: 3px solid var(--gold);
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    footer a {
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO with video background -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="vault-background.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>You Built the Audience.<br>We Engineer the Income.</h1>
+      <p>No fluff. No guesswork. Just private growth systems that turn influence into real wealth.</p>
+      <a href="#apply" class="btn">Apply to Unlock the Vault</a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <div class="container">
+    <section class="features">
+      <div class="feature">
+        <h3>🔒 Unlock Hidden Value</h3>
+        <p>We pinpoint revenue streams you didn’t know existed within your audience.</p>
+      </div>
+      <div class="feature">
+        <h3>🚀 Silent Scaling</h3>
+        <p>Implement private systems that work quietly in the background to boost your bottom line.</p>
+      </div>
+      <div class="feature">
+        <h3>🔑 Master the Vault</h3>
+        <p>Gain exclusive access to proven, high-ticket offers tailored to your niche.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- APPLICATION FORM -->
+  <section id="apply" class="form-section">
+    <h2 style="color:var(--gold);">Apply for Private Access</h2>
+    <p style="color:#ccc; margin-bottom: 30px;">We work with a select few. Let’s see if you’re a fit.</p>
+    <form action="https://formspree.io/f/yourformid" method="POST" class="form">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Tell us about your brand..." rows="4" required></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials container">
+    <h3>What Others Are Saying</h3>
+    <blockquote>
+      “Elevar helped us monetize what we already had. Silent. Scalable. Game-changer.”<br><small>– J. Moore, Creator</small>
+    </blockquote>
+    <blockquote>
+      “No fluff. Just systems that print. The vault is real.”<br><small>– T. Reyes, Brand Owner</small>
+    </blockquote>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Elevar Vault &middot; <a href="https://instagram.com/elevarvault" target="_blank">@elevarvault</a>
+  </footer>
+
+</body>
+</html>
